@@ -1,5 +1,6 @@
 class Goods::Apiv1 < Grape::API
   default_format :json
+  ## uncomment this will get swagger wrong
   # format :json
   ##grape jbuilder settings
   formatter :json, Grape::Formatter::Jbuilder

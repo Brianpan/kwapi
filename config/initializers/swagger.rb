@@ -1,4 +1,6 @@
+#swagger json document url path 
 GrapeSwaggerRails.options.url = '/swagger_doc'
+#the main api url path
 GrapeSwaggerRails.options.app_url = 'http://localhost:3000/api'
 GrapeSwaggerRails.options.app_name = "Carebest"
 # ##before filter before swagger ui

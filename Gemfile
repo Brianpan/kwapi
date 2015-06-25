@@ -28,7 +28,7 @@ gem 'grape-jbuilder'
 #swagger api view
 # gem 'grape-swagger-ui'
 gem 'grape-swagger-rails'
-gem 'grape-swagger', '0.10'
+gem 'grape-swagger'
 gem 'rack-cors', :require => 'rack/cors'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
