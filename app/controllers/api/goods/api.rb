@@ -4,6 +4,7 @@ class Goods::API < Grape::API
   ##prefix of path
   
   mount Goods::Apiv1 => "v1"
+  format :json
   ##swagger ui interfacer
   
   # get 'hello' do 

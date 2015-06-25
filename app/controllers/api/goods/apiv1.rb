@@ -1,6 +1,5 @@
 class Goods::Apiv1 < Grape::API
-  default_format :json
-  # format :json
+  format :json
   ##grape jbuilder settings
   formatter :json, Grape::Formatter::Jbuilder
   

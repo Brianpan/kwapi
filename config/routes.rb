@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  mount GrapeSwaggerRails::Engine => '/swagger'
+  mount Goods::API =>'/api'
+
   ##Use normal jbuilder api
   namespace :api do 
     namespace :v1 do 
@@ -12,7 +15,11 @@ Rails.application.routes.draw do
     end   
   end
   ##Use grape micro framework
-  mount Goods::API =>'/'
+ 
+
+  ##Use swagger grape rails
+  # mount GrapeSwaggerRails::Engine => '/swagger'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
