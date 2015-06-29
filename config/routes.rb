@@ -1,4 +1,38 @@
+# == Route Map
+#
+#                    Prefix Verb   URI Pattern                          Controller#Action
+#             user_password POST   /users/password(.:format)            devise/passwords#create
+#         new_user_password GET    /users/password/new(.:format)        devise/passwords#new
+#        edit_user_password GET    /users/password/edit(.:format)       devise/passwords#edit
+#                           PATCH  /users/password(.:format)            devise/passwords#update
+#                           PUT    /users/password(.:format)            devise/passwords#update
+#  cancel_user_registration GET    /users/cancel(.:format)              registrations#cancel
+#         user_registration POST   /users(.:format)                     registrations#create
+#     new_user_registration GET    /users/sign_up(.:format)             registrations#new
+#    edit_user_registration GET    /users/edit(.:format)                registrations#edit
+#                           PATCH  /users(.:format)                     registrations#update
+#                           PUT    /users(.:format)                     registrations#update
+#                           DELETE /users(.:format)                     registrations#destroy
+#       grape_swagger_rails        /swagger                             GrapeSwaggerRails::Engine
+#                 goods_api        /api                                 Goods::API
+# test_builder_api_v1_users GET    /api/v1/users/test_builder(.:format) api/v1/users#test_builder
+#              api_v1_users GET    /api/v1/users(.:format)              api/v1/users#index
+#                           POST   /api/v1/users(.:format)              api/v1/users#create
+#           new_api_v1_user GET    /api/v1/users/new(.:format)          api/v1/users#new
+#          edit_api_v1_user GET    /api/v1/users/:id/edit(.:format)     api/v1/users#edit
+#               api_v1_user GET    /api/v1/users/:id(.:format)          api/v1/users#show
+#                           PATCH  /api/v1/users/:id(.:format)          api/v1/users#update
+#                           PUT    /api/v1/users/:id(.:format)          api/v1/users#update
+#                           DELETE /api/v1/users/:id(.:format)          api/v1/users#destroy
+#
+# Routes for GrapeSwaggerRails::Engine:
+#   root GET  /           grape_swagger_rails/application#index
+#
+
 Rails.application.routes.draw do
+  # devise rb
+  devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions'}
+
   # the swagger ui path 
   mount GrapeSwaggerRails::Engine => '/swagger'
   # api main path
@@ -16,11 +50,6 @@ Rails.application.routes.draw do
       end   
     end   
   end
-  ##Use grape micro framework
- 
-
-  ##Use swagger grape rails
-  # mount GrapeSwaggerRails::Engine => '/swagger'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
