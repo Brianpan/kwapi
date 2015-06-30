@@ -7,19 +7,16 @@ class Auction::Apiv1 < Grape::API
   
   ##set prefix after parent module class
   # version 'v1', using: :path
+  mount Auction::V1::Products
   
-  
-  get :goodie do 
-    {name: "heeeee!"}
-  end	
-
-  get :foobar do 
-  	# {name: "yooooo!"}
-  	##params
-  	@foobar = "hahaha"
-  	##set jbuilder path under api
-  	env['api.tilt.template'] = 'v1/auction/foobar'
-  end	
-
-  
+  # put in the
+  # grape swagger setting
+  # api_version set specific version to load
+  # base_path this api's path in route
+  # hide documentation path : hider the document
+  add_swagger_documentation :format => :json,
+                # :api_version => 'v1',
+                # :mount_path => "api/swagger_doc",
+                :base_path  => "http://localhost:3000/api/v1",
+                :hide_documentation_path => true
 end	

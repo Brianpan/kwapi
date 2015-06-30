@@ -10,10 +10,10 @@ class Goods::API < Grape::API
   # get 'hello' do 
     # {name: "heeeee1!"}
   # end	
-  before do
-    header['Access-Control-Allow-Origin'] = '*'
-    header['Access-Control-Request-Method'] = '*'
-  end
+  # before do
+  #   header['Access-Control-Allow-Origin'] = '*'
+  #   header['Access-Control-Request-Method'] = '*'
+  # end
   add_swagger_documentation :format => :json,
   							:api_version => 'v1',
   							# :mount_path => "api/swagger_doc",
