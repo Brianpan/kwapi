@@ -2,7 +2,7 @@
 GrapeSwaggerRails.options.url = '/swagger_doc'
 #the main api url path
 GrapeSwaggerRails.options.app_url = 'http://localhost:3000/api'
-GrapeSwaggerRails.options.app_name = "Carebest"
+GrapeSwaggerRails.options.app_name = "Auction"
 # ##before filter before swagger ui
 GrapeSwaggerRails.options.before_filter do |request|
   # 1. Inspect the `request` or access the Swagger UI controller via `self`.

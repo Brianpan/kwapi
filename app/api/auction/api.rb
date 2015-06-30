@@ -1,8 +1,8 @@
 require 'grape-swagger'
-class Goods::API < Grape::API
+class Auction::API < Grape::API
    
   ##prefix of path to v1 in api v1
-  mount Goods::Apiv1 => "v1"
+  mount Auction::Apiv1 => "v1"
   
   before do
     header['Access-Control-Allow-Origin'] = '*'

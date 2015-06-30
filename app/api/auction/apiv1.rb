@@ -1,4 +1,4 @@
-class Goods::Apiv1 < Grape::API
+class Auction::Apiv1 < Grape::API
   default_format :json
   ## uncomment this will get swagger wrong
   # format :json
@@ -18,7 +18,7 @@ class Goods::Apiv1 < Grape::API
   	##params
   	@foobar = "hahaha"
   	##set jbuilder path under api
-  	env['api.tilt.template'] = 'v1/goods/foobar'
+  	env['api.tilt.template'] = 'v1/auction/foobar'
   end	
 
   
