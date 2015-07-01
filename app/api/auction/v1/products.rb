@@ -67,6 +67,24 @@ class Auction::V1::Products < Grape::API
         {message: e}
       end	
     end
+    
+    desc "update product"
+    params do 
+      requires :id, type: Integer	
+      requires :product, type: Hash do
+        optional :name, type: String, desc: "Product name"
+        optional :price, type: Integer, desc: "Product price"
+        optional :context, type: String, desc: "Product context"
+      end  
+    end
+    put ':id' do 
+      begin  
+        @product = Product.find(params[:id]).update_attributes(product_params.permit!)
+        {message: "Successfully update!", product: @product}
+      rescue ActiveRecord::RecordNotFound
+        {message: "No ID !"}
+      end	
+    end
 
   end 
 end
