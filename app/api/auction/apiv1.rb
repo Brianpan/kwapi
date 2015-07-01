@@ -7,8 +7,11 @@ class Auction::Apiv1 < Grape::API
   
   ##set prefix after parent module class
   # version 'v1', using: :path
-  mount Auction::V1::Products
   
+  ##mount sub api s
+  mount Auction::V1::Products
+  mount Auction::V1::Users
+
   # put in the
   # grape swagger setting
   # api_version set specific version to load
