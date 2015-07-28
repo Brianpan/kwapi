@@ -1,11 +1,10 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-lock '3.4.0'
 # set :rvm_type, :user                     # Defaults to: :auto
 set :rvm_ruby_version, '2.2.2'      # Defaults to: 'default'
 set :application, 'api'
-set :repo_url, 'git@github.com:Brianpan/sso-sample.git'
+set :repo_url, 'git@github.com:Brianpan/kwapi.git'
 
 set :user, "apps"
 set :rails_env, "production"
