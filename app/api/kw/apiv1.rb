@@ -1,4 +1,4 @@
-class Auction::Apiv1 < Grape::API
+class Kw::Apiv1 < Grape::API
   default_format :json
   ## uncomment this will get swagger wrong
   # format :json
@@ -9,8 +9,8 @@ class Auction::Apiv1 < Grape::API
   # version 'v1', using: :path
   
   ##mount sub api s
-  mount Auction::V1::Products
-  mount Auction::V1::Users
+  mount Kw::V1::Products
+  mount Kw::V1::Users
 
   # put in the
   # grape swagger setting

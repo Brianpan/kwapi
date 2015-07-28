@@ -1,4 +1,4 @@
-class Auction::V1::Products < Grape::API
+class Kw::V1::Products < Grape::API
   helpers do
     def view_prefix
       "v1/products/"

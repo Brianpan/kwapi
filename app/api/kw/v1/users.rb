@@ -1,4 +1,4 @@
-class Auction::V1::Users < Grape::API
+class Kw::V1::Users < Grape::API
   helpers do 
     def user_params
       ActionController::Parameters.new(params).require(:user).permit!
@@ -10,7 +10,7 @@ class Auction::V1::Users < Grape::API
       requires :user, type: Hash do 
         requires :name, type: String, desc: "User name"
         requires :email, type: String, desc: "User email"
-        optional :products_attributes, type: Hash, desc: "Product Hash"
+        # optional :products_attributes, type: Hash, desc: "Product Hash"
       end	
     end 
     post do 

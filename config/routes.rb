@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # the swagger ui path 
   mount GrapeSwaggerRails::Engine => '/swagger'
   # api main path
-  mount Auction::API =>'/api'
+  mount Kw::API =>'/api'
 
   ##Use normal jbuilder api
   namespace :api do 
