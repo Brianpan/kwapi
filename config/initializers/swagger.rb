@@ -1,7 +1,7 @@
 #swagger json document url path 
 GrapeSwaggerRails.options.url = '/swagger_doc'
 #the main api url path 
-GrapeSwaggerRails.options.app_url = "#{Figaro.env.host}/api/v1"
+GrapeSwaggerRails.options.app_url = "http://192.168.168.180/api-service/api/v1"
 GrapeSwaggerRails.options.app_name = "Kw"
 # ##before filter before swagger ui
 GrapeSwaggerRails.options.before_filter do |request|
